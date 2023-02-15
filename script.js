@@ -88,3 +88,5 @@ function decreaseBrushSize(){
 }; // end of decreaseBrushSize function.
 
 //drawCircle(30, 30);
+
+window.document.addEventListener("resize", e=>console.log("resized",e))
