@@ -2,6 +2,8 @@ const $canvas = document.querySelector("canvas");
 const $brush_size_entry = document.querySelector("#brush_size_entry");
 const $plus_btn = document.querySelector("#plus-size");
 const $minus_btn = document.querySelector("#minus-size");
+const $colorInput = document.querySelector("input[type=color]")
+console.log({$colorInput});
 $brush_size_entry.textContent = 1;
 // the size or thickness of the brush
 let brush_size = 10; //default size.
@@ -11,6 +13,10 @@ let mouseHold = false; // default for drag.
 const ctx = $canvas.getContext("2d");
 console.log("ctx", ctx);
 
+
+const selec_brush_color = $colorInput.value;
+console.log("brush color", selec_brush_color);
+
 // drawing object.
 const drawingInstance = {
   // draw a line.
@@ -18,6 +24,11 @@ const drawingInstance = {
     //ctx.lineWidth = brush_size;
     ctx.lineTo(x, y);
     ctx.stroke();
+  },
+
+  //changeColor.
+  changeColor(color){
+    ctx.strokeStyle = color;
   },
 
   // clear the path.
@@ -57,6 +68,13 @@ $canvas.addEventListener("mousedown", () => (mouseHold = true));
 $canvas.addEventListener("mouseup", motionStop);
 
 $canvas.addEventListener("mousemove", motionDraw);
+
+$colorInput.addEventListener("change", onColorChange);
+
+function onColorChange(e){
+  console.log("color",e.target.value);
+  drawingInstance.changeColor(e.target.value);
+};
 
 //(eventHandler) function to draw on mouse drag.
 function motionDraw(e) {
