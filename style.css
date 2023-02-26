@@ -16,16 +16,32 @@ main {
 }
 
 #canvas-container{
-  background-color: snow;
+  max-width: 100rem;
+  min-width: 5rem;
+  height: 100vh;
+  background-color: blue;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 canvas {
   border: 2px solid black;
+  margin: auto;
+}
+
+div#drawing-pad {
+  max-width: 60rem;
+  height: auto;
+  margin: auto 1rem;
+  overflow: auto;
+  background-color: snow;
 }
 
 #toolbar {
   width: auto;
-  background-color: #0003;
+  height: 33rem;
+  margin: auto;
+  background-color: gold;
 }
 
 
@@ -36,8 +52,4 @@ canvas {
 }
 
 @media only screen and (max-width:500px){
-  canvas {
-
-
-  }
 }
