@@ -19,7 +19,9 @@ main {
   max-width: 100rem;
   min-width: 5rem;
   height: 100vh;
+  /**
   background-color: blue;
+  **/
   display: flex;
   flex-direction: row-reverse;
 }
@@ -41,7 +43,7 @@ div#drawing-pad {
   width: auto;
   height: 33rem;
   margin: auto;
-  background-color: gold;
+  background-color: #85ff00;
 }
 
 
