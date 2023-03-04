@@ -13,6 +13,9 @@ let mouseHold = false; // default for drag.
 const ctx = $canvas.getContext("2d");
 console.log("ctx", ctx);
 
+// alert that the application only works on desktop.
+window.alert("Please note that this application only works on desktop!");
+
 
 const selec_brush_color = $colorInput.value;
 console.log("brush color", selec_brush_color);
