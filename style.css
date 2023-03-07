@@ -53,5 +53,23 @@ div#drawing-pad {
   background-color: transparent;
 }
 
+/* color swatch */
+div#color-swatch{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+  padding: .1rem;
+  grid-gap:.5rem;
+  width: 90%;
+  min-height: 10rem;
+  margin: auto;
+  background-color: black;
+}
+
+span.swatch-item{
+  width: 100%;
+  min-height: 3.rem;
+  background-color: white;
+}
+
 @media only screen and (max-width:500px){
 }
